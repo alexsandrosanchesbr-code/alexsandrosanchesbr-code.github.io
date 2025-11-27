@@ -1,235 +1,390 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Investimentos de Alexsandro Sanches</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Investimentos AlexSanches — Private Wealth & Strategic Investing</title>
+  <meta name="description" content="Investimentos AlexSanches — Discreet private wealth services: portfolio management, real estate, crypto advisory and bespoke financial planning." />
+  <meta name="theme-color" content="#001F3F">
 
-    <!-- Premium Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    <!-- Global Styles -->
-    <style>
-        body {
-            margin: 0;
-            background-color: #001F3F;
-            color: white;
-            font-family: 'Poppins', sans-serif;
-        }
+  <!-- Minimal critical CSS -->
+  <style>
+    :root{
+      --navy:#001F3F;
+      --navy-2:#02263d;
+      --gold:#D4AF37;
+      --white:#ffffff;
+      --muted:rgba(255,255,255,0.85);
+      --glass:rgba(255,255,255,0.03);
+      --maxw:1200px;
+      --ease:cubic-bezier(.2,.9,.3,1);
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--navy),var(--navy-2));color:var(--white);font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial; -webkit-font-smoothing:antialiased;}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
 
-        header {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(6px);
-            transition: 0.4s ease;
-        }
+    /* Header */
+    header.site-header{position:sticky;top:0;z-index:999;background:linear-gradient(180deg, rgba(0,0,0,0.14), transparent);backdrop-filter: blur(8px);transition:padding .22s var(--ease),box-shadow .22s var(--ease)}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .site-header.shrink .header-inner{padding:8px 0;box-shadow:0 12px 30px rgba(0,0,0,0.5)}
+    .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--white)}
+    .brand-logo{height:64px;width:auto;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+    .brand-title{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
+    .brand-title span{color:var(--gold);margin-left:6px}
 
-        header.shrink {
-            padding: 5px 0;
-            background: rgba(0, 0, 0, 0.85);
-        }
+    nav.primary{display:flex;align-items:center;gap:20px}
+    nav.primary a{color:var(--white);text-decoration:none;padding:8px 12px;border-radius:8px;transition:all .18s}
+    nav.primary a:hover{color:var(--gold);transform:translateY(-1px)}
+    .cta{background:linear-gradient(180deg,var(--gold), #b38f3a);color:var(--navy);padding:10px 14px;border-radius:10px;font-weight:600}
 
-        nav {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 18px;
-        }
+    /* mobile hamburger */
+    .hamburger{display:none;background:none;border:0;width:46px;height:40px;position:relative;cursor:pointer}
+    .hamburger span{display:block;height:3px;background:var(--white);margin:6px 0;border-radius:4px;transition:transform .28s,var(--ease),opacity .28s}
+    .hamburger.open span:nth-child(1){transform:translateY(9px) rotate(45deg)}
+    .hamburger.open span:nth-child(2){opacity:0}
+    .hamburger.open span:nth-child(3){transform:translateY(-9px) rotate(-45deg)}
 
-        nav img {
-            height: 55px;
-        }
+    /* off-canvas mobile nav */
+    .mobile-panel{position:fixed;top:0;right:-100%;width:290px;height:100vh;background:linear-gradient(180deg, rgba(0,0,0,0.98), rgba(0,0,0,0.94));z-index:1001;transition:right .32s var(--ease);padding:84px 18px}
+    .mobile-panel.open{right:0}
+    .mobile-panel nav ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:18px}
+    .mobile-panel a{color:var(--muted);text-decoration:none;font-size:18px}
 
-        nav a {
-            color: white;
-            margin-left: 20px;
-            text-decoration: none;
-            font-weight: 500;
-        }
+    /* HERO */
+    .hero{position:relative;min-height:64vh;display:flex;align-items:center;justify-content:center;padding:92px 0 48px;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.46) contrast(.98);transform:scale(1.03);transition:transform 1s}
+    .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg, rgba(0,0,0,0.55), rgba(0,0,0,0.18))}
+    .hero-inner{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:36px;display:flex;gap:30px;align-items:center;justify-content:space-between}
+    .hero-left{flex:1;min-width:260px}
+    .eyebrow{font-size:12px;color:var(--gold);letter-spacing:1px;font-weight:700;text-transform:uppercase;margin-bottom:12px}
+    .headline{font-family:'Playfair Display',serif;font-size:38px;margin:0 0 12px;line-height:1.02}
+    .headline .gold{color:var(--gold)}
+    .lead{color:var(--muted);max-width:620px;margin-bottom:18px}
+    .hero-visual{width:380px;height:250px;border-radius:14px;overflow:hidden;background-size:cover;background-position:center;border:1px solid rgba(255,255,255,0.04);box-shadow:0 22px 44px rgba(0,0,0,0.55)}
 
-        .hero {
-            margin-top: 120px;
-            text-align: center;
-            padding: 40px 20px;
-        }
+    /* Services */
+    section{padding:48px 0}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 14px 30px rgba(0,0,0,0.45);transition:transform .28s var(--ease)}
+    .card h3{font-family:'Playfair Display',serif;margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .card:hover{transform:translateY(-8px)}
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            color: #D4AF37;
-        }
+    /* Showcase slider */
+    .showcase{position:relative;border-radius:12px;overflow:hidden;margin-top:12px;height:320px}
+    .showcase-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transform:scale(1.04);transition:opacity .7s var(--ease), transform .7s var(--ease)}
+    .showcase-slide.active{opacity:1;transform:scale(1)}
+    .showcase-caption{position:absolute;left:20px;bottom:18px;background:linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.28));padding:10px 14px;border-radius:10px}
 
-        .slider {
-            width: 95%;
-            max-width: 1100px;
-            margin: 30px auto;
-            border-radius: 18px;
-            overflow: hidden;
-        }
+    /* Sponsors */
+    .sponsors-wrap{padding:20px 0}
+    .sponsors{display:flex;gap:18px;align-items:center;justify-content:center;flex-wrap:nowrap;overflow:hidden}
+    .sponsor{height:42px;opacity:.95;filter:grayscale(1) contrast(.9);transition:filter .18s}
+    .sponsor:hover{filter:none;opacity:1}
 
-        .slider img {
-            width: 100%;
-            display: block;
-        }
+    /* CTA & Footer */
+    .cta-panel{padding:40px 0;border-top:1px solid rgba(255,255,255,0.03)}
+    footer.site-footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03)}
+    .ft{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
 
-        /* WhatsApp Floating Button */
-        .whatsapp-float {
-            position: fixed;
-            width: 70px;
-            height: 70px;
-            bottom: 25px;
-            right: 25px;
-            border-radius: 50%;
-            z-index: 999999;
-        }
+    /* WhatsApp floating */
+    .wa-float{position:fixed;right:18px;bottom:18px;z-index:9999;border-radius:50%;width:64px;height:64px;display:grid;place-items:center;background:linear-gradient(180deg,#25D366,#128C7E);box-shadow:0 12px 30px rgba(0,0,0,0.45)}
+    .wa-float img{width:36px;height:36px;display:block}
 
-        .whatsapp-float img {
-            width: 100%;
-            height: 100%;
-        }
+    /* Email popup */
+    .email-popup{position:fixed;left:16px;right:16px;bottom:18px;background:#fff;color:#001F3F;padding:18px;border-radius:12px;z-index:9998;box-shadow:0 18px 40px rgba(0,0,0,0.35);display:none}
+    .email-popup h4{margin:0 0 6px;font-family:'Playfair Display',serif;color:#001F3F}
+    .email-popup .row{display:flex;gap:8px}
+    .email-popup input{flex:1;padding:10px;border-radius:8px;border:1px solid #e6e6e6}
+    .email-popup button{background:#001F3F;color:var(--gold);padding:10px 12px;border-radius:8px;border:0;font-weight:600}
 
-        /* Email Popup */
-        #emailPopup {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #ffffff;
-            color: #000;
-            padding: 20px;
-            text-align: center;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.3);
-            z-index: 999999;
-            display: none;
-        }
-
-        #emailPopup input {
-            width: 85%;
-            padding: 12px;
-            margin-top: 10px;
-            border-radius: 8px;
-            border: 1px solid #001F3F;
-        }
-
-        #emailPopup button {
-            margin-top: 12px;
-            background: #001F3F;
-            color: #D4AF37;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-        }
-
-        #closePopup {
-            color: red;
-            font-weight: bold;
-            float: right;
-            font-size: 18px;
-            margin-top: -10px;
-        }
-
-    </style>
-
-
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/5521960105724" class="whatsapp-float" target="_blank">
-        <img src="assets/whatsapp.png" alt="WhatsApp">
-    </a>
-
-    <!-- Tawk.to Live Chat Script -->
-    <!-- Start of Tawk.to Script -->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/6927ec1d177985195e6b3689/1jb1v4kul';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <!-- End of Tawk.to Script -->
-
+    /* utility & responsive */
+    .muted{color:var(--muted)}
+    @media (max-width:980px){
+      .header-inner{padding:12px 0}
+      .brand-logo{height:56px}
+      nav.primary{display:none}
+      .hamburger{display:block}
+      .hero-inner{flex-direction:column;gap:16px;padding:20px}
+      .hero-visual{width:100%;height:200px}
+      .services-grid{grid-template-columns:1fr}
+      .showcase{height:220px}
+      .hero{padding-top:84px}
+      .email-popup{left:12px;right:12px}
+    }
+  </style>
 </head>
 
 <body>
+  <!-- HEADER -->
+  <header class="site-header" id="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Investimentos AlexSanches Home">
+        <img id="brandLogo" class="brand-logo" src="assets/logo.png" alt="Investimentos AlexSanches logo"
+             onerror="this.onerror=null;this.src='assets/images/logo.png'">
+        <div class="brand-title">Investimentos <span>AlexSanches</span></div>
+      </a>
 
-    <header id="header">
-        <nav>
-            <img src="assets/logo.png" alt="Logo">
-            <div>
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="login.html">Login</a>
-            </div>
-        </nav>
-    </header>
+      <nav class="primary" role="navigation" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a class="cta" href="login.html">Sign In</a>
+      </nav>
 
-    <section class="hero">
-        <h1>Investments Built With Excellence</h1>
-        <p>Real Estate • Cryptocurrency • Wealth Management</p>
+      <!-- hamburger for mobile -->
+      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- off-canvas mobile nav -->
+  <aside id="mobilePanel" class="mobile-panel" aria-hidden="true">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="login.html" class="cta">Sign In</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" aria-label="Hero section">
+      <div id="heroBg" class="hero-bg" style="
+           background-image:
+             url('assets/real-estate.jpg'),
+             url('assets/images/real-estate.jpg');
+           "></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-inner container">
+        <div class="hero-left">
+          <div class="eyebrow">Private Wealth • Real Estate • Crypto</div>
+          <h1 class="headline">Investing with <span class="gold">Discretion</span> and Performance</h1>
+          <p class="lead muted">Bespoke investment strategies and private advisory for discerning clients. We combine
+            real estate, active trading and structured crypto exposure for long-term stability and growth.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="cta" href="contact.html">Request Consultation</a>
+            <a style="border:1px solid rgba(255,255,255,0.06);padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--white)" href="about.html">Our Approach</a>
+          </div>
+        </div>
+
+        <div class="hero-right" aria-hidden="true">
+          <div id="heroThumb" class="hero-visual" style="
+               background-image:
+                url('assets/crypto-building.jpg'),
+                url('assets/images/crypto-building.jpg');
+               "></div>
+        </div>
+      </div>
     </section>
 
-    <!-- Image Slider -->
-    <div class="slider">
-        <img src="assets/real-estate.jpg">
-        <img src="assets/trading-chart.jpg">
-        <img src="assets/gold-coins.jpg">
-        <img src="assets/crypto-building.jpg">
+    <!-- Sponsors row -->
+    <section class="container sponsors-wrap" aria-label="Supported by">
+      <div style="text-align:center;margin-bottom:8px;color:var(--muted);font-size:13px">Trusted by leading platforms</div>
+      <div class="sponsors" id="sponsorsList">
+        <img class="sponsor" alt="Binance" src="assets/sponsors/binance.png" onerror="this.onerror=null;this.src='assets/images/sponsors/binance.png'">
+        <img class="sponsor" alt="Bybit" src="assets/sponsors/bybit.png" onerror="this.onerror=null;this.src='assets/images/sponsors/bybit.png'">
+        <img class="sponsor" alt="Coinbase" src="assets/sponsors/coinbase.png" onerror="this.onerror=null;this.src='assets/images/sponsors/coinbase.png'">
+        <img class="sponsor" alt="MEXC" src="assets/sponsors/mexc.png" onerror="this.onerror=null;this.src='assets/images/sponsors/mexc.png'">
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="container" id="services">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap">
+        <div>
+          <h2 style="font-family:'Playfair Display',serif;margin:0 0 6px">Our Services</h2>
+          <div class="muted small">Tailored wealth management, real estate selection & crypto advisory</div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:center">
+          <a class="muted" href="login.html">Client Area</a>
+          <a class="muted" href="register.html">Create Account</a>
+        </div>
+      </div>
+
+      <div class="services-grid" style="margin-top:18px">
+        <article class="card">
+          <h3>Private Portfolio Management</h3>
+          <p>Personalized multi-asset strategies and active risk monitoring for capital preservation.</p>
+        </article>
+        <article class="card">
+          <h3>Real Estate & Asset Sourcing</h3>
+          <p>Access to premium properties and structured investment deals tailored to goals.</p>
+        </article>
+        <article class="card">
+          <h3>Crypto Strategy</h3>
+          <p>Selective digital asset exposure, custody advisory and structured products.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Showcase slider -->
+    <section class="container" aria-label="Highlights">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px">
+        <div>
+          <h2 style="font-family:'Playfair Display',serif;margin:0 0 6px">Highlights</h2>
+          <div class="muted small">Portfolio snapshots & featured cases</div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <button id="prevShowcase" aria-label="Previous" style="background:transparent;border:0;color:var(--muted);font-size:20px">‹</button>
+          <button id="nextShowcase" aria-label="Next" style="background:transparent;border:0;color:var(--muted);font-size:20px">›</button>
+        </div>
+      </div>
+
+      <div class="showcase" id="showcase">
+        <div class="showcase-slide active" data-src1="assets/trading-chart.jpg" data-src2="assets/images/trading-chart.jpg"></div>
+        <div class="showcase-slide" data-src1="assets/gold-coins.jpg" data-src2="assets/images/gold-coins.jpg"></div>
+        <div class="showcase-slide" data-src1="assets/real-estate.jpg" data-src2="assets/images/real-estate.jpg"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container cta-panel">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <h3 style="font-family:'Playfair Display',serif;margin:0">Ready to elevate your portfolio?</h3>
+          <div class="muted small">Schedule a private consultation — discreet, structured and results-driven.</div>
+        </div>
+        <div>
+          <a class="muted" href="contact.html" style="text-decoration:none;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04)">Contact Us</a>
+          <a class="cta" href="register.html" style="margin-left:10px">Create Account</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- EMAIL POPUP (improved) -->
+  <div id="emailOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.45);z-index:9997"></div>
+  <div id="emailPopup" class="email-popup" role="dialog" aria-modal="true" aria-labelledby="emailTitle" aria-hidden="true">
+    <h4 id="emailTitle">Need Help?</h4>
+    <p class="muted" style="margin:0 0 12px">Leave your email and our team will reply.</p>
+    <div class="row">
+      <input id="emailHelp" type="email" placeholder="your@email.com" />
+      <button id="sendEmailBtn" aria-label="Send email">Send</button>
     </div>
+    <div style="margin-top:10px;text-align:right"><button id="closeEmailSmall" style="background:transparent;border:0;color:#999">Close</button></div>
+  </div>
 
-    <!-- Email Popup -->
-    <div id="emailPopup">
-        <span id="closePopup">✖</span>
-        <h3>Need Help?</h3>
-        <p>Our team will reply to your email.</p>
-        <input type="email" id="emailHelp" placeholder="Enter your email...">
-        <button onclick="sendSupportEmail()">Send</button>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="ft">
+        <div style="display:flex;align-items:center;gap:12px">
+          <img src="assets/logo.png" alt="logo small" style="height:40px;border-radius:8px" onerror="this.onerror=null;this.src='assets/images/logo.png'">
+          <div style="font-family:'Playfair Display',serif">Investimentos <span style="color:var(--gold)">AlexSanches</span></div>
+        </div>
+
+        <nav style="display:flex;gap:12px;align-items:center">
+          <a href="privacy.html">Privacy</a>
+          <a href="terms.html">Terms</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+      <div style="margin-top:10px;text-align:center;color:var(--muted);font-size:13px">© <span id="yearEl"></span> Investimentos AlexSanches — All rights reserved</div>
     </div>
+  </footer>
 
+  <!-- WhatsApp floating using uploaded PNG -->
+  <a id="waBtn" class="wa-float" href="https://wa.me/5521960105724" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <img id="waImg" src="assets/whatsapp.png" alt="WhatsApp" onerror="this.onerror=null;this.src='assets/images/whatsapp.png'">
+  </a>
 
-    <!-- JavaScript -->
-    <script>
-        // Shrink Header on Scroll
-        window.addEventListener("scroll", function () {
-            let header = document.getElementById("header");
-            if (window.scrollY > 70) header.classList.add("shrink");
-            else header.classList.remove("shrink");
-        });
+  <!-- Scripts -->
+  <script>
+    // --- Utility ---
+    const el = (s) => document.querySelector(s);
+    const els = (s) => Array.from(document.querySelectorAll(s));
 
-        // Email Popup Show (after 10 seconds)
-        setTimeout(() => {
-            document.getElementById("emailPopup").style.display = "block";
-        }, 10000);
+    // Set year
+    document.getElementById('yearEl').textContent = (new Date()).getFullYear();
 
-        // Close Popup
-        document.getElementById("closePopup").onclick = function () {
-            document.getElementById("emailPopup").style.display = "none";
-        };
+    // Header shrink
+    (function(){
+      const header = document.getElementById('site-header');
+      let lastScroll = 0;
+      window.addEventListener('scroll', ()=> {
+        const y = window.scrollY;
+        header.classList.toggle('shrink', y > 40);
+        lastScroll = y;
+      }, {passive:true});
+    })();
 
-        // Email Sender using mailto:
-        function sendSupportEmail() {
-            let email = document.getElementById("emailHelp").value;
-            if (email.trim() === "") {
-                alert("Enter your email first.");
-                return;
-            }
+    // Mobile panel toggle
+    (function(){
+      const hb = document.getElementById('hamburger');
+      const panel = document.getElementById('mobilePanel');
+      hb.addEventListener('click', ()=>{
+        const open = hb.classList.toggle('open');
+        panel.classList.toggle('open', open);
+        hb.setAttribute('aria-expanded', open ? 'true' : 'false');
+        panel.setAttribute('aria-hidden', !open);
+      });
+      // close on link click
+      panel.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=> {
+        hb.classList.remove('open'); panel.classList.remove('open');
+        panel.setAttribute('aria-hidden','true');
+      }));
+    })();
 
-            window.location.href = `mailto:${email}?subject=Support Request&body=Hello, I need help with your website.`;
-        }
-    </script>
+    // Lazy-load hero scale subtle on pointer
+    (function(){
+      const heroBg = document.getElementById('heroBg');
+      window.addEventListener('pointermove', (e)=> {
+        const x = (e.clientX/window.innerWidth - 0.5) * 10;
+        const y = (e.clientY/window.innerHeight - 0.5) * 6;
+        if(heroBg) heroBg.style.transform = `translate3d(${x}px, ${y}px, 0) scale(1.03)`;
+      });
+    })();
 
-</body>
+    // Showcase slider (populate background from data-src attributes, lazy)
+    (function(){
+      const slides = els('.showcase-slide');
+      slides.forEach(s => {
+        const s1 = s.dataset.src1, s2 = s.dataset.src2;
+        // set background with fallback URLs
+        s.style.backgroundImage = `url('${s1}'), url('${s2}')`;
+      });
+      let idx = 0;
+      const show = (i) => slides.forEach((sl, n)=> sl.classList.toggle('active', n===i));
+      el('#prevShowcase')?.addEventListener('click', ()=> { idx = (idx-1+slides.length)%slides.length; show(idx); });
+      el('#nextShowcase')?.addEventListener('click', ()=> { idx = (idx+1)%slides.length; show(idx); });
+      setInterval(()=>{ idx = (idx+1)%slides.length; show(idx); }, 6000);
+    })();
 
-</html>
+    // Sponsors gentle auto-scroll (non-blocking)
+    (function(){
+      const sponsors = document.getElementById('sponsorsList');
+      if(!sponsors) return;
+      let offset = 0;
+      let paused = false;
+      sponsors.addEventListener('mouseenter', ()=> paused = true);
+      sponsors.addEventListener('mouseleave', ()=> paused = false);
+      setInterval(()=> {
+        if(paused) return;
+        offset -= 0.4;
+        sponsors.style.transform = `translateX(${offset}px)`;
+        if(Math.abs(offset) > sponsors.scrollWidth/2) offset = 0;
+      }, 40);
+    })();
+
+    // Email popup behaviour: show after 8s, close on outside click or ESC, hide on send
+    (function(){
+      const popup = document.getElementById('emailPopup');
+      const overlay = document.getElementById('emailOverlay');
+      const closeBtn = document.getElementById('closeEmailSmall');
+      const sendBtn = document.getElementById('sendEmailBtn');
+
+      function showPopup() {
+        popup.style.display = 'block';
+        overlay.style.display = 'block';
+        popup.setAttribute('aria-h
