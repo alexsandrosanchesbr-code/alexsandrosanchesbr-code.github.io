@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Investimentos AlexSanches — Private Wealth & Strategic Investing</title>
-  <meta name="description" content="Investimentos AlexSanches — Discreet private wealth services: portfolio management, real estate, crypto advisory and bespoke financial planning." />
+  <meta name="description" content="Investimentos AlexSanches — Private wealth, real estate & crypto advisory." />
   <meta name="theme-color" content="#001F3F">
 
   <!-- Fonts -->
@@ -16,19 +16,31 @@
       --navy-2:#02263d;
       --gold:#D4AF37;
       --white:#ffffff;
-      --muted:rgba(255,255,255,0.85);
+      --muted:rgba(255,255,255,0.88);
       --ease:cubic-bezier(.2,.9,.3,1);
       --maxw:1200px;
     }
-    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--navy),var(--navy-2));color:var(--white);font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial}
+
+    /* Light mode tweaks */
+    @media (prefers-color-scheme: light) {
+      :root{
+        --navy: #f7f8fb;           /* light background */
+        --navy-2: #edf1f6;
+        --white: #001F3F;          /* use navy for main text in light mode */
+        --muted: rgba(0,31,63,0.85);
+      }
+      body { color: var(--white); } /* text becomes navy in light mode due to var swap */
+    }
+
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--navy),var(--navy-2));color:var(--white);font-family:'Poppins',system-ui,Segoe UI,Roboto,Arial;-webkit-font-smoothing:antialiased}
     .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
 
     /* Header */
-    header.site-header{position:sticky;top:0;z-index:10010;background:linear-gradient(180deg, rgba(0,0,0,0.14), transparent);backdrop-filter: blur(8px);transition:padding .22s var(--ease),box-shadow .22s var(--ease)}
+    header.site-header{position:sticky;top:0;z-index:10010;background:linear-gradient(180deg, rgba(0,0,0,0.16), transparent);backdrop-filter: blur(8px);transition:padding .22s var(--ease),box-shadow .22s var(--ease)}
     .header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
     .site-header.shrink .header-inner{padding:8px 0;box-shadow:0 12px 30px rgba(0,0,0,0.5)}
     .brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:var(--white)}
-    .brand-logo{height:64px;width:auto;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
+    .brand-logo{height:76px;width:auto;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.5)}
     .brand-title{font-family:'Playfair Display',serif;font-weight:700;font-size:20px}
     .brand-title span{color:var(--gold);margin-left:6px}
 
@@ -111,7 +123,7 @@
     <div class="container header-inner">
       <a class="brand" href="index.html" aria-label="Investimentos AlexSanches Home">
         <img id="brandLogo" class="brand-logo" src="assets/logo.png" alt="Investimentos AlexSanches logo"
-             onerror="this.onerror=null;this.src='assets/images/logo.png'">
+             onerror="this.onerror=null;this.src='assets/logo.png'">
         <div class="brand-title">Investimentos <span>AlexSanches</span></div>
       </a>
 
@@ -145,7 +157,7 @@
   <!-- HERO -->
   <main>
     <section class="hero" aria-label="Hero section">
-      <div id="heroBg" class="hero-bg" data-src1="assets/real-estate.jpg" data-src2="assets/images/real-estate.jpg"></div>
+      <div id="heroBg" class="hero-bg" data-src1="assets/real-estate.jpg" data-src2="assets/real-estate.jpg"></div>
       <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="hero-inner container">
@@ -161,7 +173,7 @@
         </div>
 
         <div class="hero-right" aria-hidden="true">
-          <div id="heroThumb" class="hero-visual" data-src1="assets/crypto-building.jpg" data-src2="assets/images/crypto-building.jpg"></div>
+          <div id="heroThumb" class="hero-visual" data-src1="assets/crypto-building.jpg" data-src2="assets/crypto-building.jpg"></div>
         </div>
       </div>
     </section>
@@ -170,10 +182,11 @@
     <section class="container sponsors-wrap" aria-label="Supported by">
       <div style="text-align:center;margin-bottom:8px;color:var(--muted);font-size:13px">Trusted by leading platforms</div>
       <div class="sponsors" id="sponsorsList">
-        <img class="sponsor" alt="Binance" data-filenames='["assets/sponsors/binance.png","assets/images/sponsors/binance.png","assets/binance.png"]'>
-        <img class="sponsor" alt="Bybit" data-filenames='["assets/sponsors/bybit.png","assets/images/sponsors/bybit.png","assets/bybit.png"]'>
-        <img class="sponsor" alt="Coinbase" data-filenames='["assets/sponsors/coinbase.png","assets/images/sponsors/coinbase.png","assets/coinbase.png"]'>
-        <img class="sponsor" alt="MEXC" data-filenames='["assets/sponsors/mexc.png","assets/images/sponsors/mexc.png","assets/mexc.png"]'>
+        <!-- using exact filenames from your repo -->
+        <img class="sponsor" alt="Binance" src="assets/binance.png">
+        <img class="sponsor" alt="Bybit" src="assets/Bybit.png" onerror="this.onerror=null;this.src='assets/Bybit.png'">
+        <img class="sponsor" alt="Coinbase" src="assets/coinbase.png">
+        <img class="sponsor" alt="MEXC" src="assets/mexc.png">
       </div>
     </section>
 
@@ -220,9 +233,9 @@
       </div>
 
       <div class="showcase" id="showcase">
-        <div class="showcase-slide" data-src1="assets/trading-chart.jpg" data-src2="assets/images/trading-chart.jpg"></div>
-        <div class="showcase-slide" data-src1="assets/gold-coins.jpg" data-src2="assets/images/gold-coins.jpg"></div>
-        <div class="showcase-slide" data-src1="assets/real-estate.jpg" data-src2="assets/images/real-estate.jpg"></div>
+        <div class="showcase-slide" data-src1="assets/trading-chart.jpg" data-src2="assets/trading-chart.jpg"></div>
+        <div class="showcase-slide" data-src1="assets/gold-coins.jpg" data-src2="assets/gold-coins.jpg"></div>
+        <div class="showcase-slide" data-src1="assets/real-estate.jpg" data-src2="assets/real-estate.jpg"></div>
       </div>
     </section>
 
@@ -258,7 +271,7 @@
     <div class="container">
       <div class="ft">
         <div style="display:flex;align-items:center;gap:12px">
-          <img src="assets/logo.png" alt="logo small" style="height:40px;border-radius:8px" onerror="this.onerror=null;this.src='assets/images/logo.png'">
+          <img src="assets/logo.png" alt="logo small" style="height:40px;border-radius:8px" onerror="this.onerror=null;this.src='assets/logo.png'">
           <div style="font-family:'Playfair Display',serif">Investimentos <span style="color:var(--gold)">AlexSanches</span></div>
         </div>
 
@@ -274,32 +287,28 @@
 
   <!-- WhatsApp floating using PNG -->
   <a id="waBtn" class="wa-float" href="https://wa.me/5521960105724" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <img id="waImg" src="assets/whatsapp.png" alt="WhatsApp" onerror="this.onerror=null;this.src='assets/images/whatsapp.png'">
+    <img id="waImg" src="assets/whatsapp.png" alt="WhatsApp" onerror="this.onerror=null;this.src='assets/whatsapp.png'">
   </a>
 
-  <!-- SCRIPT: behavior, image fallback loader, tawk loader (deferred) -->
+  <!-- SCRIPT: behavior, image safe loader, tawk loader (deferred) -->
   <script>
-    // tiny helpers
-    const $ = (s) => document.querySelector(s);
-    const $$ = (s) => Array.from(document.querySelectorAll(s));
+    const $ = (s)=>document.querySelector(s);
+    const $$ = (s)=>Array.from(document.querySelectorAll(s));
 
     // set year
     document.getElementById('yearEl').textContent = new Date().getFullYear();
 
     // header shrink
     (function(){
-      const header = $('#site-header');
-      window.addEventListener('scroll', ()=> {
-        header.classList.toggle('shrink', window.scrollY > 36);
-      }, {passive:true});
+      const header = document.getElementById('site-header');
+      window.addEventListener('scroll', ()=> header.classList.toggle('shrink', window.scrollY > 36), {passive:true});
     })();
 
-    // Reliable hamburger: ensure element exists and attach handlers
+    // HAMBURGER
     (function(){
       const hb = document.getElementById('hamburger');
       const panel = document.getElementById('mobilePanel');
       if(!hb || !panel) return;
-      // increase clickable area for mobile
       hb.style.touchAction = 'manipulation';
       hb.tabIndex = 0;
       const toggle = ()=>{
@@ -307,121 +316,82 @@
         panel.classList.toggle('open', open);
         hb.setAttribute('aria-expanded', open?'true':'false');
         panel.setAttribute('aria-hidden', !open);
-        // add subtle focus to brand when opening to keep layout
-        if(open) $('#brandLogo')?.classList.add('open-focus');
       };
       hb.addEventListener('click', toggle);
       hb.addEventListener('keydown', (e)=> { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); } });
 
-      // Close mobile panel when clicking outside it
+      // close when clicking outside
       document.addEventListener('click', (ev)=>{
         if(!panel.classList.contains('open')) return;
         const target = ev.target;
         if(panel.contains(target) || hb.contains(target)) return;
-        // click was outside -> close
-        hb.classList.remove('open'); panel.classList.remove('open');
-        panel.setAttribute('aria-hidden','true');
+        hb.classList.remove('open'); panel.classList.remove('open'); panel.setAttribute('aria-hidden','true');
       });
-
-      // close on navigation click
+      // close links
       panel.querySelectorAll('a').forEach(a => a.addEventListener('click', ()=>{
         hb.classList.remove('open'); panel.classList.remove('open'); panel.setAttribute('aria-hidden','true');
       }));
     })();
 
-    // Image loader with fallbacks (loads image then applies as background or <img>.src)
-    function tryLoadImage(paths, onload, onfail){
-      // paths: array of URL strings to try in order
-      let i=0;
-      const img = new Image();
-      img.onload = ()=> onload(paths[i]);
-      img.onerror = ()=> {
-        i++;
-        if(i >= paths.length) { if(onfail) onfail(); return; }
-        img.src = paths[i];
-      };
-      img.src = paths[i];
+    // tiny image loader that uses the exact assets/ filenames you uploaded
+    function imageExists(url, cb){
+      const i = new Image();
+      i.onload = ()=> cb(true, url);
+      i.onerror = ()=> cb(false, url);
+      i.src = url;
     }
 
-    // Initialize hero & heroThumb backgrounds using fallback paths
+    // HERO and showcase init
     (function(){
       const heroBg = document.getElementById('heroBg');
       const heroThumb = document.getElementById('heroThumb');
 
-      if(heroBg){
-        const p1 = heroBg.dataset.src1 || 'assets/real-estate.jpg';
-        const p2 = heroBg.dataset.src2 || 'assets/images/real-estate.jpg';
-        tryLoadImage([p1,p2,'assets/real-estate.jpg','assets/images/real-estate.jpg'], (good)=>{
-          heroBg.style.backgroundImage = `url('${good}')`;
-          console.log('hero loaded:', good);
-        }, ()=>{ console.warn('hero image failed to load'); heroBg.style.backgroundColor = '#021726' });
-      }
+      const heroPaths = ['assets/real-estate.jpg'];
+      const thumbPaths = ['assets/crypto-building.jpg'];
 
+      if(heroBg){
+        // try first path; if fails, leave a neutral background
+        imageExists(heroPaths[0], (ok, url)=> {
+          if(ok) heroBg.style.backgroundImage = `url('${url}')`;
+          else heroBg.style.backgroundColor = '#021726';
+        });
+      }
       if(heroThumb){
-        const p1 = heroThumb.dataset.src1 || 'assets/crypto-building.jpg';
-        const p2 = heroThumb.dataset.src2 || 'assets/images/crypto-building.jpg';
-        tryLoadImage([p1,p2,'assets/crypto-building.jpg','assets/images/crypto-building.jpg'], (good)=>{
-          heroThumb.style.backgroundImage = `url('${good}')`;
-          console.log('heroThumb loaded:', good);
-        }, ()=>{ console.warn('heroThumb failed'); });
+        imageExists(thumbPaths[0], (ok, url)=> {
+          if(ok) heroThumb.style.backgroundImage = `url('${url}')`;
+          else heroThumb.style.backgroundColor = '#021726';
+        });
       }
     })();
 
-    // Sponsors: each <img class="sponsor"> has data-filenames JSON array
+    // Sponsors: just rely on images provided in assets/
     (function(){
-      $$('.sponsor').forEach(imgEl=>{
-        const raw = imgEl.getAttribute('data-filenames') || '[]';
-        let list = [];
-        try{ list = JSON.parse(raw); } catch(e){ list = []; }
-        // ensure sensible fallback names if none provided
-        if(!list.length){
-          const name = (imgEl.alt || 'sponsor').toLowerCase().replace(/\s+/g,'');
-          list = [`assets/sponsors/${name}.png`,`assets/images/sponsors/${name}.png`,`assets/${name}.png`];
-        }
-        // try load the list
-        tryLoadImage(list, (good)=>{
-          imgEl.src = good;
-          imgEl.style.opacity = '1';
-        }, ()=>{
-          // fallback: tiny transparent placeholder so layout is kept
-          imgEl.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40"></svg>';
-          imgEl.style.opacity = '0.18';
-          console.warn('Sponsor image failed for', imgEl.alt, list);
+      $$('.sponsor').forEach(img=>{
+        // if image fails, show low opacity placeholder (keeps layout)
+        imageExists(img.src, (ok)=>{
+          if(!ok){ img.src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="40"></svg>'; img.style.opacity='0.18'; console.warn('Sponsor failed to load:', img.alt); }
         });
       });
     })();
 
-    // Showcase slides: set backgrounds from data attributes with fallbacks
+    // Showcase slides
     (function(){
       const slides = document.querySelectorAll('.showcase-slide');
-      slides.forEach(sl=>{
-        const s1 = sl.dataset.src1 || '';
-        const s2 = sl.dataset.src2 || '';
-        const tries = [s1,s2].filter(Boolean);
-        if(!tries.length){
-          // default to real-estate if something missing
-          tries.push('assets/real-estate.jpg','assets/images/real-estate.jpg');
-        } else {
-          tries.push('assets/real-estate.jpg','assets/images/real-estate.jpg');
+      slides.forEach((sl, i)=>{
+        const url = sl.dataset.src1 || sl.dataset.src2 || '';
+        if(url){
+          imageExists(url, (ok, u)=> { if(ok) sl.style.backgroundImage = `url('${u}')`; else console.warn('Showcase image failed', u); });
         }
-        tryLoadImage(tries, (good)=>{
-          sl.style.backgroundImage = `url('${good}')`;
-        }, ()=>{ console.warn('Showcase slide failed to load any image'); });
       });
-
       let idx = 0;
-      const show = (i)=>{
-        slides.forEach((s,n)=> s.classList.toggle('active', n===i));
-      };
-      // controls
+      const show = (i)=> slides.forEach((s,n)=> s.classList.toggle('active', n===i));
       $('#prevShowcase')?.addEventListener('click', ()=>{ idx = (idx-1+slides.length)%slides.length; show(idx); });
       $('#nextShowcase')?.addEventListener('click', ()=>{ idx = (idx+1)%slides.length; show(idx); });
       setInterval(()=>{ idx = (idx+1)%slides.length; show(idx); }, 6000);
-      // start
       show(0);
     })();
 
-    // Email popup behavior: open after 8s, close on overlay click or ESC, hide after send
+    // Email popup: show/hide
     (function(){
       const overlay = document.getElementById('emailOverlay');
       const popup = document.getElementById('emailPopup');
@@ -431,27 +401,23 @@
       function show(){ overlay.style.display='block'; popup.style.display='block'; popup.setAttribute('aria-hidden','false'); }
       function hide(){ overlay.style.display='none'; popup.style.display='none'; popup.setAttribute('aria-hidden','true'); }
 
-      // show once after 8 seconds
-      setTimeout(()=>{ show(); }, 8000);
-
+      setTimeout(show, 8000);
       overlay.addEventListener('click', hide);
       closeSmall.addEventListener('click', hide);
       document.addEventListener('keydown', (e)=> { if(e.key === 'Escape') hide(); });
 
       sendBtn.addEventListener('click', ()=>{
-        const email = (document.getElementById('emailHelp') || {}).value || '';
+        const email = (document.getElementById('emailHelp')||{}).value || '';
         if(!email || !email.includes('@')){ alert('Please enter a valid email.'); return; }
-        // Use mailto for now (you can switch to EmailJS later)
-        window.location.href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent('Support request')}&body=${encodeURIComponent('Hello, I need help.')}`;
+        window.location.href = `mailto:${encodeURIComponent(email)}?subject=${encodeURIComponent('Support request')}`;
         hide();
       });
     })();
 
-    // Defer Tawk.to load and ensure widget z-index is high so it appears above smaller overlays.
+    // Defer Tawk.to to avoid blocking paint; try to set high z-index for iframe after load
     (function(){
-      // Delay load a little to ensure first paint is fast
       window.addEventListener('load', ()=>{
-        setTimeout(function(){
+        setTimeout(()=>{
           try{
             var s1=document.createElement("script"), s0=document.getElementsByTagName("script")[0];
             s1.async=true;
@@ -459,25 +425,19 @@
             s1.charset='UTF-8';
             s1.setAttribute('crossorigin','*');
             s0.parentNode.insertBefore(s1,s0);
-            // also try to ensure widget z-index is above common overlays (tawk sets its own z-index, but this helps)
-            s1.onload = function(){ 
-              try{ 
-                // if Tawk API available, adjust style on open (best-effort)
-                setTimeout(()=>{ 
-                  const node = document.querySelector('#tawkchat-minified-iframe') || document.querySelector('iframe[id^="tawk"]');
-                  if(node) node.style.zIndex = '20000';
-                }, 1000);
-              } catch(e){console.warn('tawk load callback error', e)}
+            s1.onload = ()=> {
+              // try to bump iframe z-index for visibility (best-effort)
+              setTimeout(()=> {
+                const ifr = document.querySelector('iframe[id^="tawk"]');
+                if(ifr) ifr.style.zIndex = 20000;
+              }, 1000);
             };
-          } catch(err){
-            console.warn('Failed to inject Tawk script', err);
-          }
-        }, 900); // small delay
+          }catch(e){ console.warn('tawk injection failed', e); }
+        }, 900);
       }, {once:true});
     })();
 
-    // Small logging helper to help debug on mobile (open console via remote debugging if needed)
-    console.info('Index script loaded — image loader & UI fixes enabled.');
+    console.info('Index ready — images will load from assets/ (per your repo list).');
   </script>
 </body>
-  </html>
+          </html>
