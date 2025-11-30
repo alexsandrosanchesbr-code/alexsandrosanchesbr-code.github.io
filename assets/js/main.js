@@ -36,3 +36,18 @@ setInterval(() => {
     currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
 }, 5000);
+/* Auto Email Popup After 10 Seconds */
+setTimeout(() => {
+    const popup = document.getElementById("emailPopup");
+    if (popup) popup.style.display = "block";
+}, 10000);
+
+/* Close Popup */
+document.addEventListener("DOMContentLoaded", () => {
+    const closeBtn = document.getElementById("popupClose");
+    if (closeBtn) {
+        closeBtn.addEventListener("click", () => {
+            document.getElementById("emailPopup").style.display = "none";
+        });
+    }
+});
