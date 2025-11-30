@@ -1,230 +1,159 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Sanches Investimentos — Wealth management, investment advisory, market analysis, and secure platform recommendations." />
-  <title>Sanches Investimentos — Invest with Confidence</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sanches Investimentos — Wealth management, investment advisory, market analysis, financial consulting, and secure investment recommendations." />
+    <title>Sanches Investimentos — Invest with Confidence</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <!-- Preload the Largest Contentful Paint (hero LCP) -->
-  <link rel="preload" as="image" href="assets/images/real-estate.jpg" type="image/jpeg">
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-
-  <meta name="theme-color" content="#021a33" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="Sanches Investimentos home">
-        <img src="assets/images/logo.png" alt="Sanches Investimentos logo" class="brand-logo" width="220" height="78">
-      </a>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container header-inner">
 
-      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a href="index.html">Home</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#about">About</a>
-        <a href="#contact" class="btn-cta">Get Started</a>
-      </nav>
+            <a href="index.html" class="brand">
+                <img src="assets/images/logo.png" alt="Sanches Investimentos Logo" class="brand-logo">
+                <span class="brand-name">Sanches Investimentos</span>
+            </a>
 
-      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Mobile slide-out panel -->
-  <aside id="mobile-panel" class="mobile-panel" aria-hidden="true">
-    <div class="mobile-top">
-      <img src="assets/images/logo.png" alt="logo" class="mobile-logo" width="160" height="56">
-      <button id="mobile-close" class="mobile-close" aria-label="Close menu">&times;</button>
-    </div>
-
-    <nav class="mobile-nav" aria-label="Mobile navigation">
-      <a href="index.html">Home</a>
-      <a href="#services">Services</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </aside>
-
-  <main>
-
-    <!-- HERO (split-screen) -->
-    <section class="hero" aria-label="Hero">
-      <div class="hero-inner container">
-
-        <!-- Left column (text) -->
-        <div class="hero-left">
-          <div class="eyebrow">Sanches Investimentos</div>
-
-          <h1 class="headline">
-            Invest with <span class="gold">Confidence</span>.<br>
-            Grow with <span class="gold">Intelligence</span>.<br>
-            Secure Your <span class="gold">Financial Future</span>.
-          </h1>
-
-          <p class="lead">
-            We provide professional wealth management, safe investment platform recommendations, strategic market insights and personalized financial consultancy to guide your long-term success.
-          </p>
-
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#contact">Request Consultation</a>
-            <a class="btn btn-outline" href="#about">Learn More</a>
-          </div>
-
-          <ul class="hero-features" aria-hidden="true">
-            <li>Private Wealth Advisory</li>
-            <li>Risk-Aware Growth Strategies</li>
-            <li>Global Market Intelligence</li>
-          </ul>
-        </div>
-
-        <!-- Right column (images + slider) -->
-        <div class="hero-right">
-
-          <!-- LCP fallback image (visible instantly, but JS will paint slider behind text) -->
-          <picture class="hero-lcp">
-            <source srcset="assets/images/real-estate.jpg" type="image/jpeg">
-            <img src="assets/images/real-estate.jpg" alt="Real estate investment" width="900" height="600" loading="eager">
-          </picture>
-
-          <!-- Slider container (JS paints background onto #hero-slide) -->
-          <div id="hero-slider" class="hero-slider" aria-hidden="false">
-            <div id="hero-slide" class="hero-slide" role="img" aria-label="Hero slideshow"></div>
-
-            <div class="slider-controls" aria-hidden="true">
-              <button id="prev-slide" class="control" aria-label="Previous slide">‹</button>
-              <button id="next-slide" class="control" aria-label="Next slide">›</button>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span><span></span><span></span>
             </div>
-          </div>
+
+            <nav class="primary-nav" id="primary-nav">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- HERO SLIDER -->
+    <section class="hero">
+        <div class="hero-slider" id="hero-slider">
+
+            <div class="slide active">
+                <img src="assets/images/crypto-building.jpg" alt="Financial building">
+                <div class="hero-text">
+                    <h1>Invest with Confidence.</h1>
+                    <p>Grow with Intelligence. Secure Your Financial Future.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="assets/images/real-estate.jpg" alt="Real estate tower">
+                <div class="hero-text">
+                    <h1>Strategic Wealth Management</h1>
+                    <p>Expert guidance for long-term financial security.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="assets/images/trading-chart.jpg" alt="Market trading chart">
+                <div class="hero-text">
+                    <h1>Smart Market Insights</h1>
+                    <p>Data-driven decision-making for investors.</p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="assets/images/gold-coins.jpg" alt="Gold coins">
+                <div class="hero-text">
+                    <h1>Grow Your Wealth</h1>
+                    <p>Diversified strategies tailored to your goals.</p>
+                </div>
+            </div>
+
         </div>
 
-      </div>
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button id="prev">&#10094;</button>
+            <button id="next">&#10095;</button>
+        </div>
     </section>
 
-    <!-- Services -->
-    <section class="container services" id="services" aria-label="Services">
-      <h2 class="section-title">Our Services</h2>
-      <div class="services-grid">
-        <article class="card enter-fade-up">
-          <h3>Wealth Management</h3>
-          <p>Strategic portfolio design for growth and stability.</p>
-        </article>
-        <article class="card enter-fade-up">
-          <h3>Investment Advisory</h3>
-          <p>Safe platform recommendations backed by research.</p>
-        </article>
-        <article class="card enter-fade-up">
-          <h3>Market Analysis</h3>
-          <p>Actionable intelligence for smarter decisions.</p>
-        </article>
-      </div>
+    <!-- SERVICES -->
+    <section class="services container">
+        <h2>Market Analysis</h2>
+        <p class="section-subtitle">Actionable intelligence for smarter decisions.</p>
+
+        <div class="service-grid">
+
+            <div class="service-card">
+                <img src="assets/images/image7.jpg" alt="Market Analysis">
+                <h3>Real Estate</h3>
+                <p>Opportunities vetted with rigorous due diligence.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="assets/images/image8.jpg" alt="Execution & Trading">
+                <h3>Trading & Execution</h3>
+                <p>Precision and discipline for reliable outcomes.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="assets/images/image5.jpg" alt="Wealth Preservation">
+                <h3>Wealth Preservation</h3>
+                <p>Gold and long-term defensive strategies.</p>
+            </div>
+
+            <div class="service-card">
+                <img src="assets/images/image6.jpg" alt="Digital Asset Research">
+                <h3>Digital Asset Research</h3>
+                <p>Strategic exposure with risk-aware entry.</p>
+            </div>
+
+        </div>
     </section>
 
-    <!-- Visual grid (uses the remaining images you uploaded) -->
-    <section class="container visual-grid" aria-label="Highlights">
-      <div class="grid-item">
-        <img src="assets/images/image5.jpg" alt="Strategic real estate highlight" loading="lazy">
-        <div class="grid-caption">
-          <h4>Strategic Real Estate</h4>
-          <p>Opportunities vetted with rigorous due diligence.</p>
+    <!-- SPONSORS -->
+    <section class="sponsors container">
+        <h3>Trusted by leading platforms</h3>
+
+        <div class="sponsor-logos">
+            <img src="assets/sponsors/binance.png" alt="Binance">
+            <img src="assets/sponsors/bybit.png" alt="ByBit">
+            <img src="assets/sponsors/coinbase.png" alt="Coinbase">
+            <img src="assets/sponsors/mexc.png" alt="MEXC">
         </div>
-      </div>
-      <div class="grid-item">
-        <img src="assets/images/image6.jpg" alt="Trading highlight" loading="lazy">
-        <div class="grid-caption">
-          <h4>Trading & Execution</h4>
-          <p>Precision and discipline for reliable outcomes.</p>
-        </div>
-      </div>
-      <div class="grid-item">
-        <img src="assets/images/image7.jpg" alt="Wealth preservation" loading="lazy">
-        <div class="grid-caption">
-          <h4>Wealth Preservation</h4>
-          <p>Gold and long-term defensive strategies.</p>
-        </div>
-      </div>
-      <div class="grid-item">
-        <img src="assets/images/image8.jpg" alt="Digital assets research" loading="lazy">
-        <div class="grid-caption">
-          <h4>Digital Asset Research</h4>
-          <p>Strategic exposure with risk-aware entry.</p>
-        </div>
-      </div>
     </section>
 
-    <!-- Sponsors -->
-    <section class="container sponsors-section" aria-label="Trusted by leading platforms">
-      <h4 class="muted small">Trusted by leading platforms</h4>
-      <div class="sponsors" id="sponsors">
-        <img class="sponsor" src="assets/sponsors/binance.png" alt="Binance" loading="lazy" onerror="this.style.display='none'">
-        <img class="sponsor" src="assets/sponsors/bybit.png" alt="Bybit" loading="lazy" onerror="this.style.display='none'">
-        <img class="sponsor" src="assets/sponsors/coinbase.png" alt="Coinbase" loading="lazy" onerror="this.style.display='none'">
-        <img class="sponsor" src="assets/sponsors/mexc.png" alt="MEXC" loading="lazy" onerror="this.style.display='none'">
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer container" aria-label="Footer">
-      <div class="footer-inner">
-        <div>© <span id="year"></span> Sanches Investimentos. All rights reserved.</div>
-        <nav class="footer-nav">
-          <a href="privacy.html">Privacy</a>
-          <a href="terms.html">Terms</a>
-        </nav>
-      </div>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>© 2025 Sanches Investimentos. All rights reserved.</p>
+        </div>
     </footer>
 
-  </main>
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
 
-  <!-- WhatsApp floating button -->
-  <a id="whatsapp-float" class="wa-float" href="https://wa.me/5521960105724" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <img src="assets/images/whatsapp.png" alt="WhatsApp chat" width="40" height="40">
-  </a>
-
-  <!-- Email Popup (shows after 4s; clicking outside closes) -->
-  <div id="email-popup" class="email-popup" aria-hidden="true">
-    <div class="email-popup-inner">
-      <h4>Need assistance?</h4>
-      <p class="muted">Leave your email and we'll reply personally.</p>
-      <form id="email-form" class="email-form" novalidate>
-        <div class="row">
-          <input id="email-input" type="email" placeholder="you@company.com" required>
-          <button type="submit" class="btn">Send</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
-
-  <!-- Site behavior JS (deferred) -->
-  <script src="assets/js/main.js" defer></script>
-
-  <!--Start of Tawk.to Script-->
-  <script type="text/javascript">
-  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-  (function(){
-  var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-  s1.async=true;
-  s1.src='https://embed.tawk.to/6927ec1d177985195e6b3689/1jb1v4kul';
-  s1.charset='UTF-8';
-  s1.setAttribute('crossorigin','*');
-  s0.parentNode.insertBefore(s1,s0);
-  })();
-  </script>
-  <!--End of Tawk.to Script-->
+    <!-- TAWK.TO -->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/YOUR_TAWK_ID/1hthtq123'; 
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
 
 </body>
-    </html>
+</html>
